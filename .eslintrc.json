@@ -1,0 +1,27 @@
+{
+  "root": true,
+  "parser": "@typescript-eslint/parser",
+  "extends": [
+    "eslint:recommended",
+    "prettier"
+  ],
+  "env": {
+    "node": true,
+    "browser": true
+  },
+  "rules": {
+    // "@typescript-eslint/no-explicit-any": "off"
+  },
+  // Limit TypeScript linting to TS/TSX
+  // https://github.com/typescript-eslint/typescript-eslint/issues/1928
+  "overrides": [
+    {
+      "files": ["src/**/*.{ts,tsx}"],
+      "extends": [
+        "plugin:@typescript-eslint/recommended",
+        "prettier/@typescript-eslint"
+      ],
+      "plugins": ["@typescript-eslint"]
+    }
+  ]
+}
